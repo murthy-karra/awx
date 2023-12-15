@@ -13,4 +13,4 @@
 
   - name: Print return information from the previous task
     ansible.builtin.debug:
-      var: ansible_vpc.vpcs[1]
+      var: ansible_vpc
