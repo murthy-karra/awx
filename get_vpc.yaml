@@ -6,6 +6,7 @@
 
   - name: Create VPC
     amazon.aws.ec2_vpc_net:
+      region: us-east-1
       name: ansible2
       cidr_block: 10.1.0.0/16
       state: present
