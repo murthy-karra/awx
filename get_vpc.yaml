@@ -4,17 +4,17 @@
 
   tasks:
 
-  - name: Create VPC
-    amazon.aws.ec2_vpc_net:
-      region: us-east-1
-      name: ansible2
-      cidr_block: 10.1.0.0/16
-      state: present
-    register: vpc
+  # - name: Create VPC
+  #   amazon.aws.ec2_vpc_net:
+  #     region: us-east-1
+  #     name: ansible2
+  #     cidr_block: 10.1.0.0/16
+  #     state: present
+  #   register: vpc
 
-  - name: Output VPC details
-    debug:
-      msg: "VPC ansible2 created with VPC ID {{ vpc.vpc.id }} and CIDR {{ vpc.vpc.cidr_block }}"
+  # - name: Output VPC details
+  #   debug:
+  #     msg: "VPC ansible2 created with VPC ID {{ vpc.vpc.id }} and CIDR {{ vpc.vpc.cidr_block }}"
 
   - name: Get all VPCs
     ec2_vpc_net_info:
